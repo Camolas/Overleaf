@@ -1,0 +1,6 @@
+@article{einstein,
+    title = {{FIPA ACL Message Structure Specification }},
+    year = {2002},
+    author = {FIPA TC Communication},
+    url = {http://www.fipa.org/specs/fipa00061/SC00061G.pdf},
+}

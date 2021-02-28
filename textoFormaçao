@@ -1,0 +1,152 @@
+% ***********************************Parte que geralmente não mexemos*******************************************
+\documentclass[12pt,a4paper]{article} %fonte da letra e tamanho do documento
+\usepackage[utf8]{inputenc} % possibilita utilizar códigos directos para alguns caracteres específicos
+\usepackage{natbib} %auxiliar nas citações/referências
+\usepackage[portuges]{babel} %garantir que os acentos da língua portuguesa são "lidos"
+\usepackage{fancyhdr} %permitir acrescentar cabeçalhos e rodapés
+\usepackage{graphicx} %possibilita adicionar gráficos, figuras
+\usepackage{float} %não permite que uma imagem/tabela seja dividida em duas páginas 
+\usepackage{wrapfig} %permite que haja texto à volta de imagens/tabelas
+\usepackage{indentfirst} %indentação da primeira linha do parágrafo
+\usepackage[left=2.3 cm,top=3cm,right=2.5cm,bottom=2.5cm,bindingoffset=0.5cm]{geometry} %medidas do template
+%Medidas poderão ser alteradas conforme as normas/requerimento do docente/empresa
+\usepackage{multirow} %permite criar tabelas com várias linhas e colunas
+\usepackage[table,xcdraw]{xcolor} %usar outras cores na tabela
+\usepackage{amsmath} %permite usar símbolos matemáticos
+\usepackage[pdftex]{hyperref} %permite criar hiperligações
+\usepackage{subfigure} %usar várias imagens em simultâneo
+\usepackage{fancyheadings}
+ %usar estilo fancy para os cabeçalhos e rodapés
+\renewcommand{\baselinestretch}{1.5} %parágrafos com espaçamento de 1.5
+% **************************************************************************************************************
+\pagestyle{fancy} %usado para o estilo do cabeçalho e rodapé
+
+\rhead{Fenómenos Interfaciais} %cabeçalho do lado direito
+\lhead{MI Engenharia Biomédica} %cabeçalho do lado esquerdo
+%\chead{\includegraphics[scale=0.4]{imagem.png}} %podem ser adicionadas imagens ao cabeçalho também
+
+%**********************************************CAPA************************************************************
+\begin{document}
+\begin{titlepage} % pagina não numerada 
+
+\begin{center}
+    \hfill
+    \vspace{1cm}
+    
+    \begin{large}
+    \bfseries {\Huge Universidade do Minho}
+    \vspace{3cm}
+    
+    \bfseries {LaTex \\ Sistema de preparação de documentos}
+    \vspace{4cm}
+    
+    \bfseries {Fenómenos interfaciais \\ 2º Semestre 2020/2021 \\ Docente: Mariana Henriques}
+    \vspace{5cm}
+    \end{large}
+
+
+\end{center}
+
+\begin{flushleft}
+    Daniela Vieira (A81555)
+    Mª Francisca Nogueira (A81590)
+\end{flushleft} 
+
+\vspace{2cm}
+
+\begin{flushright}
+{\flushleft {Braga, 27 de fevereiro 2021}}
+\end{flushright}
+
+\thispagestyle{empty} %forçar o documento a não ter mais nada para além daquilo que eu escrevo no titlepage
+\end{titlepage}
+
+
+\pagenumbering{roman} %inicio da numeração romana
+\cfoot{{- \thepage } - } %estilo da paginação
+
+\section*{\centering{Resumo}} %com o asterisco não numeramos o resumo e ele não aparece no indice
+
+Formatar um documento pode-nos levar a perder muitas horas do nosso tempo preciso. 
+
+Assim, através desta pequena sebenta e o restante material fornecido espero que vos ajude na realização de qualquer tipo de trabalho.  
+
+
+
+
+%INDICE NORMAL
+\newpage  %cria nova página
+\renewcommand*\contentsname{Índice} %renomeia a página de contents como indice
+\tableofcontents %permite adicionar conteudo ao indice automaticamente
+
+%INDICE IMAGENS
+\newpage
+\listoffigures %indice das figuras
+
+
+%INDICE TABELAS
+\newpage
+\listoftables %indice das figuras
+
+%********************************COMEÇA O CORPO DE TEXTO*****************************
+\newpage
+\pagenumbering {arabic} %fim da numeração romana e quero numeração numérica
+\cfoot{{- \thepage } - }
+\section{Introdução}
+\subsection{subcapitulo}
+
+Formatar um documento pode-nos levar a perder muitas horas do nosso tempo precioso, usando ferramentas como o Latex (Figura \ref{imagem1}). \par
+Assim, através desta pequena sebenta, Tabela \ref{tabela imagem} e o restante material fornecido espero que vos ajude na realização de qualquer tipo de trabalho \cite{fipa}.  \par
+
+\begin{figure}[h]
+\centering
+\subfigure[Primeira]{\includegraphics [scale=0.6]{peixe.jpg}}
+\subfigure[Segunda]{\includegraphics [scale=0.2] {flor.jpg}}
+\center{\subfigure[Terceira]{\includegraphics [scale=0.2]{fruta.jpg}}}
+\caption{Conjunto de figuras}
+\end{figure}
+
+\vspace{1cm}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale= 0.1]{imagem/latex.png}    
+\caption[Ola]{Ferramenta Latex} %legenda imagem no índice e no texto
+\label{imagem1} %lcodigo para refererir imagem no texto
+\end{figure}
+
+\begin{table}[h!]
+\begin{center}
+\caption{Exemplo de imagem}
+\label{tabela imagem}
+\vspace{1cm}
+\begin{tabular}{l|c|}
+\cline{2-2}
+                                      & \textit{Preço} \\ \hline
+\multicolumn{1}{|l|}{\textbf{Capa}}   & 2.00           \\ \hline
+\multicolumn{1}{|l|}{\textbf{Estojo}} & 1.50           \\ \hline
+\multicolumn{1}{|l|}{\textbf{Lápis}}  & \textit{0.70}  \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{equation}
+    \sin ^{2} + \cos ^{2} = 1
+\end{equation}
+
+
+
+
+
+
+\newpage
+\bibliography{biblio} %nome do ficheiro da bibliografia
+\bibliographystyle{unsrt}
+
+
+\newpage
+\addcontentsline{toc}{section}{Anexos} %acrescentar anexos ao indice
+\section*{Anexos} %não numerar usamos o asterisco
+\subsection*{Anexo 1} %não numerar usamos o asterisco
+
+
+\end{document}

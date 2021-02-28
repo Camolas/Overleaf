@@ -1,0 +1,5 @@
+\begin{figure}[argumento de posição]
+\includegraphics[medidas]{imagem.jpg}    
+\caption[OLA]{Exemplo de imagem} %legenda imagem no índice e no texto
+\label{imagem1} %lcodigo para refererir imagem no texto
+\end{figure}

@@ -1,0 +1,7 @@
+\begin{figure}[h]
+\centering
+\subfigure[Primeira]{\includegraphics [scale=0.6]{peixe.jpg}}
+\subfigure[Segunda]{\includegraphics [scale=0.2] {flor.JPG}}
+\center{\subfigure[Terceira]{\includegraphics [scale=0.2]{fruta.jpg}}}
+\caption{Conjunto de figuras}
+\end{figure}
